@@ -6,27 +6,24 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		Scanner teclado = new Scanner(System.in);
-		int base = 0, exponente = 0;
-		int acumulador = 1;
-		 
-		System.out.println("Ingrese la base");
-		base = teclado.nextInt();
-		System.out.println("Ingrese el exponente");
-		exponente = teclado.nextInt();
+		int numero = 0; 
 		
-		potencia(base,exponente,acumulador);
+		System.out.println("Ingrese por favor el número");
+		numero = teclado.nextInt();
 		
-	} 
+		factorial(numero,1); 
+		
+	}   
 	
-	static void potencia(int b, int e,int a) {
+	static void factorial(int n, int a) {
+		a = a*n; 
 		
-		a = a * b;
-		if(e>1) {
-			e--;
-			potencia(b,e,a);
+		if(n>1) {
+			n--;
+			factorial(n,a);
 		}else {
-			System.out.println("La potencia de "+b+" es: "+a);
-		}
+			System.out.println("El factorial de es: "+a);
+		}  
 	}
 	 
 }
